@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>添加状态</title>
+  <style>
+   html,body{
+     padding: 0;
+     margin: 0;
+   }
+    .btn{
+      margin: 100px auto;
+      cursor:pointer;
+      font-size: 16px;
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      background-color: #ff8300;
+      box-shadow: 0 3px 9px 0 rgba(255, 131, 0, 0.35);
+      color: #fff;
+      width: 120px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+  }
+  span{
+      display: inline;
+      position: relative;
+      z-index: 1;
+  }
+  .btn:hover{
+      box-shadow: 0 5px 13px 0 rgba(255, 131, 0, 0.59);
+      top:-2px;
+  }
+  .btn:active{
+      box-shadow: 0 3px 9px 0 rgba(255, 131, 0, 0.35);
+      color: #ffca8c;
+      background-color: #f07b00;
+      top:0;
+  }
+  .btn:after{
+      position: absolute;
+      content: "";
+      display: block;
+      margin: auto;
+      width: 0;
+      height: 0;
+      left:60px;
+      top: 25px;
+      background: rgba(255, 157, 0, 1);
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.5s;
+  }
+  .btn:hover:after{
+      left: -40px;
+      top:-75px;
+      width: 200px;
+      height: 200px;
+      opacity: 1;
+      transition-duration: 0.5s;
+
+  }
+  .btn:active:after{
+      width: 0;
+      height: 0;
+      left:60px;
+      top: 25px;
+      opacity: 1;
+      transition-duration: 0s;
+
+  }
+  </style>
+</head>
+<body>
+
+   <button class="btn">
+     <span>BUTTON</span>
+   </button>
+</body>
+</html>

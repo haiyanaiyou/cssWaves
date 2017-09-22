@@ -14,14 +14,70 @@
     .demo{
       width: 300px;
       height: 300px;
-      margin: 80px auto;
+      margin: 180px auto;
       text-align: center;
+    }
+    .btn{
+      display: block;
+      width: 120px;
+      height: 30px;
+      line-height: 30px;
+      color: white;
+      background: orangered;
+      padding: 10px 5px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 10px 10px 20px #ccc;
+      overflow: hidden;
+      user-select:none;
+      /*  文本不能被选择*/
+
+    }
+    .btn:after{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 200px;
+      height: 200px;
+      top:-75px;
+      left: -40px;
+      background: orchid;
+      opacity: 0;
+      border-radius: 50%;
+      transition: all 0.8s;
+      
+
+
+    }
+    .btn:hover{
+      background: orange;
+      top: -4px;
+      box-shadow: 20px 20px 30px #ccc;
+      box-sizing: content-box;
+
+    }
+    a:active{
+      background: orchid;
+      top: 0;
+      box-shadow: 0 3px 9px 0 rgba(255, 131, 0, 0.6);
+    }
+    a:active:after{
+      width: 0;
+      height: 0;
+      left: 60px;
+      top: 25px;
+      opacity: 1;
+      transition-duration: 0s;
     }
   </style>
 </head>
 <body>
   <div class="demo">
-    <button type=""></button>
+    <a href="javascript:void(0);" class="btn">button</a>
   </div>
 </body>
 </html>
